@@ -5,11 +5,6 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# User specific environment and startup programs
-PATH=$PATH:$HOME/bin:/sbin:/usr/sbin:/opt/bin
-PS1="\u@\h: \w > "
-GREP_COLOR='1;32'
-export GDFONTPATH="/usr/share/fonts/msttcorefonts"
-export GNUPLOT_DEFAULT_GDFONT="arial"
-
-export PATH GREP_COLOR PS1
+# Global environment and startup programs
+#PS1="\h \[\033[32m\][\w]\[\033[0m\]\n\[\e[1;31m\][\!]\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
+PS1="\h \[\033[32m\][\w]\[\033[0m\]\n\[\033[1;34m\][\!]\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
