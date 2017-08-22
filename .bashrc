@@ -18,4 +18,3 @@ if [ `uname` == 'Darwin' ]; then
 elif [ `uname` == 'Linux' ]; then
     source ~/.linuxrc
 fi
-
