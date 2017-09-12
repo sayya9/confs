@@ -198,7 +198,8 @@ set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<,nbsp:_
 " Highlight special characters in yellow
 highlight SpecialKey term=standout ctermbg=yellow guibg=yellow
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
+set softtabstop=2
 set tabstop=4
 set smarttab
 
