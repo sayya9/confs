@@ -1,5 +1,5 @@
 # Aliases and functions
-alias ssh='LANG=en_US.UTF-8 ssh -o "XAuthLocation=/opt/X11/bin/xauth"'
+alias ssh='LANG=en_US.UTF-8 ssh -o "XAuthLocation=/opt/X11/bin/xauth" -A'
 alias ls='ls -Fh'
 
 # Export LSCOLORS environment

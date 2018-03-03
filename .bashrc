@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Global aliases and functions
-alias s='sudo '
+alias s='sudo'
 alias sw='sudo su -'
 
 svim () {
@@ -19,6 +19,10 @@ for x in kubectl helm; do
         . <(${x} completion bash)
     fi
 done
+
+# Enable ssh-agent
+eval `ssh-agent`
+ssh-add
 
 if [ `uname` == 'Darwin' ]; then
     source ~/.macrc
