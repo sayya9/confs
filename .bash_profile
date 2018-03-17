@@ -13,3 +13,6 @@ export EDITOR=vim
 
 # Set language
 export LANG=en_US.UTF-8
+
+# Set PATH
+export PATH=${PATH}:/opt/bin
