@@ -21,7 +21,10 @@ export EDITOR=vim
 export LANG=en_US.UTF-8
 
 # Set PATH
-export PATH=${PATH}:/opt/bin
+export PATH=${PATH}:/opt/bin:${GOPATH}/bin
+
+# Set Go env
+export GOPATH=~/go
 
 # Global aliases and functions
 alias s='sudo'
