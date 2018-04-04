@@ -39,7 +39,7 @@ for x in kubectl helm; do
     if [ -x `which ${x}` ]; then
         . <(${x} completion bash)
     fi
-done
+done 2> /dev/null
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
