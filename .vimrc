@@ -200,7 +200,6 @@ highlight SpecialKey term=standout ctermbg=yellow guibg=yellow
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set tabstop=4
 set smarttab
 
 set lbr
