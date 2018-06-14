@@ -33,11 +33,11 @@ svim () {
 
 # kubectl and helm autocompletion
 for x in kubectl helm; do
-    if [ -x `which ${x}` ]; then
+    path=`which $x`
+    if [ -x "$path" ]; then
         . <(${x} completion bash)
     fi
 done 2> /dev/null
-#done 2> /dev/null
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
