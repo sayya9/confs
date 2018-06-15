@@ -37,7 +37,7 @@ for x in kubectl helm; do
     if [ -x "$path" ]; then
         . <(${x} completion bash)
     fi
-done 2> /dev/null
+done
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
