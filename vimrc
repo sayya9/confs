@@ -21,6 +21,9 @@ set hlsearch
 " Replace yaml to ansible filetype
 autocmd Filetype yaml set filetype=ansible
 
+" For lightline.vim
+set laststatus=2
+
 " Mappings
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 noremap <F4> :set list!<CR>

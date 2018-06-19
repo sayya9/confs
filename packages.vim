@@ -8,6 +8,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'itchyny/lightline.vim'
 
 " Custom textobjects
 Plug 'kana/vim-textobj-user'
