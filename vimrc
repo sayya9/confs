@@ -25,9 +25,21 @@ autocmd Filetype yaml set filetype=ansible
 " For lightline.vim
 set laststatus=2
 
+" Highlight the currnet line and column
+" See: https://medium.com/usevim/highlight-the-current-line-b6ff8af798c7
+hi cursorline cterm=none term=none
+set cursorline
+highlight CursorLine guibg=#303000 ctermbg=235
+highlight CursorColumn guibg=#303000 ctermbg=237
+
 " Mappings
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+noremap <F3> :set cursorcolumn!<CR>
+inoremap <F3> <C-o>:set cursorcolumn!<CR>
+cnoremap <F3> <C-c>:set cursorcolumn!<CR>
 noremap <F4> :set list!<CR>
 inoremap <F4> <C-o>:set list!<CR>
 cnoremap <F4> <C-c>:set list!<CR>
 noremap <F6> :set hlsearch! hlsearch?<CR>
+noremap <Leader>n nzz
+noremap <Leader>N Nzz
