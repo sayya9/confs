@@ -46,7 +46,7 @@ cnoremap <F3> <C-c>:set cursorcolumn!<CR>
 noremap <F4> :set list!<CR>
 inoremap <F4> <C-o>:set list!<CR>
 cnoremap <F4> <C-c>:set list!<CR>
-noremap <F6> :set hlsearch! hlsearch?<CR>
+noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
