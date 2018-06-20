@@ -4,6 +4,7 @@ set nocompatible
 set hidden
 set history=5000
 set pastetoggle=<f5>
+set incsearch
 
 " Customize the way that Vim handles tab-completion at the command prompt
 set wildmenu
