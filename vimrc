@@ -5,6 +5,7 @@ set hidden
 set history=5000
 set pastetoggle=<f5>
 set incsearch
+set mouse=a
 
 " Customize the way that Vim handles tab-completion at the command prompt
 set wildmenu
@@ -32,6 +33,11 @@ set cursorline
 highlight CursorLine guibg=#303000 ctermbg=235
 highlight CursorColumn guibg=#303000 ctermbg=237
 
+" For NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 " Mappings
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 noremap <F3> :set cursorcolumn!<CR>
@@ -43,3 +49,4 @@ cnoremap <F4> <C-c>:set list!<CR>
 noremap <F6> :set hlsearch! hlsearch?<CR>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
+map <C-n> :NERDTreeToggle<CR>
