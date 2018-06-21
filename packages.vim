@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
+Plug 'nelstrom/vim-visual-star-search'
 
 " Custom textobjects
 Plug 'kana/vim-textobj-user'
