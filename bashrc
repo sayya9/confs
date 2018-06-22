@@ -33,7 +33,7 @@ svim () {
 
 # kubectl and helm autocompletion
 for x in kubectl helm; do
-    path=`which $x`
+    path=`which $x 2> /dev/null`
     if [ -x "$path" ]; then
         . <(${x} completion bash)
     fi
