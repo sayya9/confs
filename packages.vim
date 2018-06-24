@@ -18,6 +18,7 @@ Plug 'kana/vim-textobj-entire'
 " Ansible
 Plug 'chase/vim-ansible-yaml'
 
+" File system explorer
 Plug 'scrooloose/nerdtree'
 
 " Initialize plugin system

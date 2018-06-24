@@ -33,8 +33,11 @@ set cursorline
 highlight CursorLine guibg=#303000 ctermbg=235
 highlight CursorColumn guibg=#303000 ctermbg=237
 
+" Highlight the SpellBad
+" hi clear SpellBad
+hi SpellBad term=underline cterm=underline ctermfg=red
+
 " For NERDTree
-autocmd StdinReadPre * let s:std_in=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
