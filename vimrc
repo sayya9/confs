@@ -34,7 +34,7 @@ highlight CursorLine guibg=#303000 ctermbg=235
 highlight CursorColumn guibg=#303000 ctermbg=237
 
 " Highlight the SpellBad
-" hi clear SpellBad
+hi clear SpellBad
 hi SpellBad term=underline cterm=underline ctermfg=red
 
 " For NERDTree
