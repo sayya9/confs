@@ -26,6 +26,9 @@ autocmd Filetype yaml set filetype=ansible
 " For lightline.vim
 set laststatus=2
 
+" Ignore East Asian characters
+set spelllang=en,cjk
+
 " Highlight the currnet line and column
 " See: https://medium.com/usevim/highlight-the-current-line-b6ff8af798c7
 hi cursorline cterm=none term=none
