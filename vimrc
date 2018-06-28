@@ -44,6 +44,10 @@ hi SpellBad term=underline cterm=underline ctermfg=red
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
+" For groovy
+autocmd BufNewFile,BufRead Jenkinsfile* setf groovy
+autocmd FileType groovy setlocal ts=4 sts=4 sw=4 expandtab autoindent
+
 " Mappings
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 noremap <F3> :set cursorcolumn!<CR>
@@ -56,3 +60,4 @@ noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
+
