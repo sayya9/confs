@@ -6,6 +6,8 @@ set history=5000
 set pastetoggle=<f5>
 set incsearch
 set mouse=a
+set splitright
+set splitbelow
 
 " Customize the way that Vim handles tab-completion at the command prompt
 set wildmenu
