@@ -20,8 +20,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " Highlight all matches
 set hlsearch
 
-" Replace yaml to ansible filetype
+" Change filetype
 autocmd Filetype yaml set filetype=ansible
+autocmd BufNewFile,BufRead Dockerfile* setf dockerfile
 
 " For lightline.vim
 set laststatus=2
