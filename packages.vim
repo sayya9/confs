@@ -21,5 +21,9 @@ Plug 'chase/vim-ansible-yaml'
 " File system explorer
 Plug 'scrooloose/nerdtree'
 
+" Markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+
 " Initialize plugin system
 call plug#end()
