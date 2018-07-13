@@ -6,22 +6,25 @@ elif [ `uname` == 'Linux' ]; then
     source ~/.linuxrc
 fi
 
+# Source Cloud SDK tools
+if [ -f "/Users/andrew/opt/google-cloud-sdk/completion.bash.inc" ]; then
+    # Enable shell command completion for gcloud
+    . /Users/andrew/opt/google-cloud-sdk/completion.bash.inc
+
+    # Add the Google Cloud SDK command line tools
+    . /Users/andrew/opt/google-cloud-sdk/path.bash.inc
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# Global environment and startup programs
 export PS1="\[\033[38;5;184m\]\h \[\033[32m\][\w]\[\033[0m\]\n\[\033[1;34m\][\!]\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
-
-# Set default editor
 export EDITOR=vim
-
-# Set language
 export LANG=en_US.UTF-8
-
-# Set PATH
 export PATH=${PATH}:/opt/bin
+export KUBECONFIG=~/.kube/config:~/.kube/mylab
 
 # Global aliases and functions
 alias s='sudo'
