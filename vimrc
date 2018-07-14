@@ -23,7 +23,7 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set hlsearch
 
 " Change filetype
-autocmd Filetype yaml set filetype=ansible ts=2
+autocmd Filetype yaml set filetype=ansible expandtab
 autocmd BufNewFile,BufRead Dockerfile* setf dockerfile
 
 " For lightline.vim
