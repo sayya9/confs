@@ -24,6 +24,7 @@ set hlsearch
 
 " Change filetype
 autocmd Filetype yaml set filetype=ansible expandtab
+autocmd BufRead,BufNewFile,BufEnter *.yaml.j2 set filetype=ansible expandtab
 autocmd BufNewFile,BufRead Dockerfile* setf dockerfile
 
 " For lightline.vim
