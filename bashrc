@@ -24,7 +24,7 @@ export PS1="\[\033[38;5;184m\]\h \[\033[32m\][\w]\[\033[0m\]\n\[\033[1;34m\][\!]
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export PATH=${PATH}:/opt/bin
-export KUBECONFIG=~/.kube/config:~/.kube/mylab
+export KUBECONFIG=~/.kube/config:~/.kube/mylab:~/.kube/cluster-1
 
 # Global aliases and functions
 alias s='sudo'
