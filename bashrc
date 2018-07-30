@@ -29,6 +29,7 @@ export KUBECONFIG=~/.kube/motion:~/.kube/mylab:~/.kube/cluster-1:~/.kube/ali-mot
 # Global aliases and functions
 alias s='sudo'
 alias sw='sudo su -'
+alias grep='grep --color'
 
 svim () {
     sudo vim -u ~andrew/.vimrc $@
