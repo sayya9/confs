@@ -64,4 +64,3 @@ noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
-

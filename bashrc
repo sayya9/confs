@@ -16,7 +16,7 @@ if [ -f "/Users/andrew/opt/google-cloud-sdk/completion.bash.inc" ]; then
 fi
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
+if [ -x /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
@@ -38,10 +38,15 @@ svim () {
 # kubectl and helm autocompletion
 for x in kubectl helm; do
     path=`which $x 2> /dev/null`
-    if [ -x "$path" ]; then
+    if [ -f "$path" ]; then
         . <(${x} completion bash)
     fi
 done
+
+# aws command completion
+if which aws_completer > /dev/null 2>&1; then
+    complete -C '/usr/local/bin/aws_completer' aws
+fi
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
