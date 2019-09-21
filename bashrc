@@ -43,7 +43,7 @@ for x in kubectl helm; do
     fi
 done
 
-# aws command completion
+# Enable aws command completion
 if which aws_completer > /dev/null 2>&1; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
@@ -51,7 +51,7 @@ fi
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
-function start_agent {
+start_agent () {
     echo "Initialising new SSH agent..."
     ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
     echo succeeded
@@ -72,3 +72,8 @@ else
         start_agent;
     fi
 fi
+
+# kubectx for aws env
+ax () {
+    export AWS_DEFAULT_PROFILE=$1 && kubectx $1
+}
