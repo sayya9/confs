@@ -64,12 +64,3 @@ noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
-
-" yank to clipboard
-if has("clipboard")
-  set clipboard=unnamed " copy to the system clipboard
-
-  if has("unnamedplus") " X11 support
-    set clipboard+=unnamedplus
-  endif
-endif
